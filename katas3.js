@@ -79,11 +79,11 @@ console.log(`Kata07: ${kata7()}`);
 function kata8() {
     let arr = [];
     for(let i = 100; i > 0; i--){
-        if(i % 3 == 0 && i % 7 == 0){
+        if(i % 3 == 0 || i % 7 == 0){
             arr.push(i);
         }
     }
-    let array = arr.join(', ')
+   let array = arr.join(', ')
     return array;
 }
 console.log(`Kata08: ${kata8()}`);
@@ -179,25 +179,25 @@ return soma;
 }
 console.log(`Kata16: ${kata16()}`)
 
-function kata17() {
-    let valores = 0;
-    for(let i = 0; i < sampleArray.length; i++){  
-        if(sampleArray[i] == 17){
-            valores = sampleArray[i]
+function kata17(arr) {
+    let min = arr[0];
+    for(let i = 0; i < arr.length; i++){  
+        if(arr[i] < min){
+            min = arr[i];
         }
      }
-     return valores;
+     return min;
 }
-console.log(`Kata17: ${kata17()}`)
+console.log(`Kata 17: ${kata17(sampleArray)}`)
 
-function kata18() {
-    let valores = 0;
-    for(let i = 0; i < sampleArray.length; i++){  
-        if(sampleArray[i] == 940){
-            valores = sampleArray[i]
+function kata18(arr) {
+    let max = arr[0];
+    for(let i = 0; i < arr.length; i++){  
+        if(arr[i] > max){
+            max = arr[i]
         }
      }
-     return valores;
+     return max;
 }
-console.log(`Kata18: ${kata18()}`)
+console.log(`Kata18: ${kata18(sampleArray)}`)
 
